@@ -2,6 +2,15 @@
 # Pure Python NLP matching — no external AI API needed
 
 import string
+import nltk
+
+# Download all required NLTK data (safe for Render)
+nltk.download('punkt',      quiet=True)
+nltk.download('punkt_tab',  quiet=True)
+nltk.download('stopwords',  quiet=True)
+nltk.download('wordnet',    quiet=True)
+nltk.download('omw-1.4',    quiet=True)
+
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
